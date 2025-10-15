@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const {Pool} = require('pg');
+app.use(express.json());
 
 const pool = new Pool({
     connectionString: process.env.CONNECTION_STRING
